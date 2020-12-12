@@ -37,5 +37,5 @@ end)
 
 
 function drawCrosshair()
-	local sprite = DrawRect(0.5, 0.5, 0.001, 0.001, 150, 150, 150, 255)
+	local sprite = DrawRect(0.5, 0.5, 0.001, 0.001, 255, 255, 255, 255)
 end

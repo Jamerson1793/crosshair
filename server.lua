@@ -10,5 +10,5 @@ RegisterCommand('global_ctoggle', function()
 	elseif not on then
 		on = true
 	end
-	TriggerClientEvent('cl:update_c', on)
+	TriggerClientEvent('cl:update_c', -1, on)
 end)
