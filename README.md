@@ -5,4 +5,4 @@ If you would like to use this on your server feel free to and you dont have to c
 
 
 Any help needed in this resource please direct to this discord
-https://discord.gg/XRNnKkJW
+https://discord.gg/KRwNYHxn3S
