@@ -1,4 +1,4 @@
-local on - true
+local on = true
 
 
 
