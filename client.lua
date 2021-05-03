@@ -9,6 +9,7 @@ local on = true
 Citizen.CreateThread(function()
 	while true do
 		if on and IsAimCamActive() then
+			HideHudComponentThisFrame(14)
 			drawCrosshair()
 		end
 	Citizen.Wait(6)
