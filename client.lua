@@ -8,9 +8,11 @@ local on = true
 
 Citizen.CreateThread(function()
 	while true do
-		if on and IsAimCamActive() then
+		if on and IsAimCamActive() and GetSelectedPedWeapon(PlayerPedId()) ~= GetHashKey("WEAPON_UNARMED") then
 			HideHudComponentThisFrame(14)
 			drawCrosshair()
+		elseif not on then
+			HideHudComponentThisFrame(14)
 		end
 	Citizen.Wait(6)
 	end
