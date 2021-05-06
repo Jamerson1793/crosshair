@@ -1,29 +1,19 @@
-
 local on = true
-
-
-
-
-
 
 Citizen.CreateThread(function()
 	while true do
-		if on and IsAimCamActive() then
+		if on and IsPlayerFreeAiming(PlayerId()) then
 			HideHudComponentThisFrame(14)
-			drawCrosshair()
+			DrawRect(0.5, 0.5, 0.001, 0.001, 255, 255, 255, 255)
 		end
-	Citizen.Wait(6)
+		Citizen.Wait(6)
 	end
 end)
-
 
 RegisterNetEvent('cl:update_c')
 AddEventHandler('cl:update_c', function(bool)
 	on = bool
 end)
-
-
-
 
 RegisterCommand('togglecrosshair', function()
 	if on then
@@ -32,11 +22,3 @@ RegisterCommand('togglecrosshair', function()
 		on = true
 	end
 end)
-
-
-
-
-
-function drawCrosshair()
-	local sprite = DrawRect(0.5, 0.5, 0.001, 0.001, 255, 255, 255, 255)
-end
